@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/phone_card_backup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="5dp">
+
+            <TextView
+                style="?android:attr/textAppearance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/title_shape_color"
+                android:padding="10dp"
+                android:text="@string/phone_backup_title"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                style="?android:attr/textAppearance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/phone_backup_last"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/phone_tv_backup_sms"
+                style="?android:attr/textAppearanceButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/phone_tv_backup_sms_text"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/phone_tv_backup_cat"
+                style="?android:attr/textAppearanceButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/phone_tv_backup_cat_text"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/phone_tv_backup_call"
+                style="?android:attr/textAppearanceButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/phone_tv_backup_call_text"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/phone_bn_backup"
+                    style="?android:attr/buttonBarPositiveButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/phone_bn_backup_title" />
+
+                <Button
+                    android:id="@+id/phone_bn_backup_delete"
+                    style="?android:attr/buttonBarNegativeButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/phone_bn_backup_delete" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/phone_card_restore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/phone_card_backup">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="5dp">
+
+            <TextView
+                android:id="@+id/phone_tv_restore_title"
+                style="?android:attr/textAppearance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/title_shape_color"
+                android:padding="10dp"
+                android:text="@string/phone_restore_title"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/spSmsFileList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:prompt="@string/phone_sms_label"
+                android:spinnerMode="dialog" />
+
+            <Spinner
+                android:id="@+id/spCatFileList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/phone_cat_label"
+                android:spinnerMode="dialog" />
+
+            <Spinner
+                android:id="@+id/spCallFileList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/phone_call_label"
+                android:spinnerMode="dialog" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/phone_bn_restore"
+                    style="?android:attr/buttonBarPositiveButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/phone_bn_restore_title" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
